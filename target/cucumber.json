@@ -1,0 +1,185 @@
+[
+  {
+    "line": 13,
+    "elements": [
+      {
+        "line": 14,
+        "name": "user opened web browser and maximizes it",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3177638700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user has entered Mobile Financial Platform system URL",
+            "match": {
+              "location": "LoginStepDef.user_has_entered_Mobile_Financial_Platform_system_URL()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-08T12:46:26.148Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2695071300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.initializeDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 75981300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Login using valid username and valid password",
+        "description": "",
+        "id": "user-login;login-using-valid-username-and-valid-password",
+        "after": [
+          {
+            "result": {
+              "duration": 924261800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.closeDriver(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2095964200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enters username \"habitamu\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"habitamu\"",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStepDef.user_enters_username(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1290600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enters password \"habitamu\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"habitamu\"",
+                  "offset": 21
+                }
+              ],
+              "location": "LoginStepDef.user_enters_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1209000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user clicks on Login button",
+            "match": {
+              "location": "LoginStepDef.user_clicks_on_Login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1015300,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "system displays landing page",
+            "match": {
+              "location": "LoginStepDef.system_displays_dashboard_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1037200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user clicks on logout button",
+            "match": {
+              "location": "LoginStepDef.user_clicks_on_logout_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 864600,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user is logged out of the system",
+            "match": {
+              "location": "LoginStepDef.user_is_logged_out_of_the_system()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          },
+          {
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "User Login",
+    "description": "",
+    "id": "user-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/login.feature",
+    "tags": [
+      {
+        "name": "@Regression",
+        "type": "Tag",
+        "location": {
+          "line": 11,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 12,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
