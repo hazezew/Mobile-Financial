@@ -67,6 +67,7 @@ public class CucumberExtentReporter {
                     extentTest.pass(MarkupHelper.createLabel("SCENARIO PASSED", ExtentColor.GREEN));
                     break;
                 case FAILED:
+//                    UnlockLockedUser.unlockAllUsers();
                     extentTest.fail(MarkupHelper.createLabel("SCENARIO FAILED",ExtentColor.RED));
                     captureScreenshot(driver,filePath);
                     try {
@@ -83,8 +84,8 @@ public class CucumberExtentReporter {
     }
 
     public void startTest(String scenarioName){
-        extentTest=extentReports.createTest(scenarioName);
-        extentTest.assignAuthor("Test-Automation-Author:-Habitamu-Azezew---(0910988905)");
+//        extentTest=extentReports.createTest(scenarioName);
+//        extentTest.assignAuthor("EthSwitch-Automation-Test-Author:-Habitamu-Azezew");
     }
 
     public void writeException(ITestResult result){
