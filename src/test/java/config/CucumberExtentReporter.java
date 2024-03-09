@@ -47,6 +47,7 @@ public class CucumberExtentReporter {
         extentReports.setSystemInfo("Project Name", "Mobile Financial Platform");
         extentReports.setSystemInfo("Executed on",dtf.format(now));
         extentReports.setSystemInfo("Environment", "Test Automation");
+        extentReports.setSystemInfo("Browser Used",Config.browser);
         extentReports.setSystemInfo("User Name", System.getProperty("user.name"));
         extentReports.setSystemInfo("OS Name",System.getProperty("os.name"));
         extentReports.setSystemInfo("Java Version",System.getProperty("java.version"));

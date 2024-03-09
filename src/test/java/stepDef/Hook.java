@@ -30,13 +30,15 @@ public class Hook {
             if (os.contains("WIN")) {
                 if (Config.browser.equalsIgnoreCase("chrome")) {
                     System.setProperty("webdriver.chrome.driver", ".\\src\\test\\webDrivers\\WIN\\chromedriver.exe");
-                    driver = new ChromeDriver();
+//                    driver = new ChromeDriver();
 
-//                    ChromeOptions options = new ChromeOptions();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+
 //                    options.addArguments("--headless", "--window-size=1920,1200","--ignore-certificate-errors");
 //                    options.addArguments("--headless");
 //                    options.addArguments("--no-sandbox");
-//                    driver = new ChromeDriver(options);
+                    driver = new ChromeDriver(options);
 
                 } else if (Config.browser.equalsIgnoreCase("firefox")) {
                     System.setProperty("webdriver.gecko.driver", ".\\src\\test\\webDrivers\\WIN\\geckodriver.exe");
