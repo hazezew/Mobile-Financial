@@ -1,13 +1,10 @@
 package pageObj;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -16,26 +13,26 @@ public class LoginPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    @FindBy(id = "APjFqb")
-    private WebElement txtSearch;
-
-    @FindBy(id = "txtUserName")
+    @FindBy(xpath = "//input[@name='principal']")
     private WebElement txtUserName;
 
-    @FindBy(id = "txtPassword")
+    @FindBy(xpath = "//input[@name='password']")
     private WebElement txtPassword;
 
-    @FindBy(id = "ddlFinancial")
-    private WebElement ddlFinancial;
+    @FindBy(linkText = "Forgot Password?")
+    private WebElement linkForgotPassword;
 
-    @FindBy(id = "linkForgetPwd")
-    private WebElement linkForgetPwd;
-
-    @FindBy(id = "lnkUnlockUser")
-    private WebElement lnkUnlockUser;
-
-    @FindBy(id = "ImgbtnLogin")
+    @FindBy(xpath = "//span[text()='Login']")
     private WebElement btnLogin;
+
+    @FindBy(xpath = "//input[@name='principal']/following::p[1]")
+    private WebElement usernameValidation;
+
+    @FindBy(xpath = "//input[@name='password']/following::p[1]")
+    private WebElement passwordValidation;
+
+    @FindBy(xpath = "//div[contains(@class,\"Notification\") and contains(@class,\"description\")]")
+    private WebElement successErrorMessageDisplay;
 
     public LoginPage(WebDriver driver){
         this.driver=driver;
@@ -50,23 +47,30 @@ public class LoginPage {
         wait.until(ExpectedConditions.visibilityOf(txtPassword));
         txtPassword.sendKeys(password);
     }
-    public void setDdlFinancial(String financial){
-        wait.until(ExpectedConditions.visibilityOf(ddlFinancial));
-        Select finDDL=new Select(ddlFinancial);
-        finDDL.selectByVisibleText(financial);
+    public ForgotPasswordPage clickLinkForgotPassword(){
+        wait.until(ExpectedConditions.visibilityOf(linkForgotPassword));
+        linkForgotPassword.click();
+        return new ForgotPasswordPage(driver);
     }
-    public void setTxtSearch(String search){
-        wait.until(ExpectedConditions.visibilityOf(txtSearch));
-        txtSearch.sendKeys(search);
-        txtSearch.sendKeys(Keys.ENTER);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public LandingPage clickBtnLogin(){
+        wait.until(ExpectedConditions.visibilityOf(btnLogin));
+        btnLogin.click();
+        return new LandingPage(driver);
     }
-    public void clickLBtnLogin(){
-
+    public String getErrorMessage(){
+        return "123";
+    }
+    public String getUsernameValidationMessage(){
+        wait.until(ExpectedConditions.visibilityOf(usernameValidation));
+        return usernameValidation.getText();
+    }
+    public String getPasswordValidation(){
+        wait.until(ExpectedConditions.visibilityOf(passwordValidation));
+        return passwordValidation.getText();
+    }
+    public String getSuccessErrorMessageDisplay(){
+        wait.until(ExpectedConditions.visibilityOf(successErrorMessageDisplay));
+        return successErrorMessageDisplay.getText();
     }
     public String getURL(){
         return driver.getCurrentUrl();

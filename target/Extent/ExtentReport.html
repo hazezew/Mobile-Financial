@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 9, 2024 12:04:43 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 15, 2024 02:43:43 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +69,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -111,10 +112,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>6</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>3</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -134,15 +135,15 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Login using valid username and valid password</span>
-						<span class='test-time'>Mar 9, 2024 12:04:52 PM</span>
+						<span class='test-name'>Forgot Password with valid email</span>
+						<span class='test-time'>Mar 15, 2024 02:43:45 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Mar 9, 2024 12:04:52 PM</span>
-	<span class='label end-time'>Mar 9, 2024 12:04:52 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+7ms</span>
+	<span class='label start-time'>Mar 15, 2024 02:43:45 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:43:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+2ms</span>
 </div>
 <div class='test-attributes'>
 	<div class='author-list'>
@@ -161,10 +162,354 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>12:04:52 PM</td>
+				<td class='timestamp'>2:43:45 PM</td>
 				<td class='step-details'>
 						<span class='badge white-text green'>SCENARIO PASSED</span>
 					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Forgot Password with an invalid email username value</span>
+						<span class='test-time'>Mar 15, 2024 02:43:49 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:43:49 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:43:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+119ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:43:49 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>SCENARIO FAILED</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:43:49 PM</td>
+				<td class='step-details'>
+						Please refer below screenshot for more detail.
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Forgot_Password_with_an_invalid_email_username_value.png' src='Forgot_Password_with_an_invalid_email_username_value.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Forgot Password with an invalid email format</span>
+						<span class='test-time'>Mar 15, 2024 02:43:53 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:43:53 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:43:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+106ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:43:53 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>SCENARIO FAILED</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:43:53 PM</td>
+				<td class='step-details'>
+						Please refer below screenshot for more detail.
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Forgot_Password_with_an_invalid_email_format.png' src='Forgot_Password_with_an_invalid_email_format.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Forgot Password with an empty email</span>
+						<span class='test-time'>Mar 15, 2024 02:43:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:43:56 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:43:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:43:56 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>SCENARIO PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Login using valid username and valid password</span>
+						<span class='test-time'>Mar 15, 2024 02:44:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:44:03 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:44:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:44:03 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>SCENARIO PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Login using valid username but invalid password</span>
+						<span class='test-time'>Mar 15, 2024 02:44:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:44:08 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:44:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:44:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>SCENARIO PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Login using invalid username but valid password</span>
+						<span class='test-time'>Mar 15, 2024 02:44:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:44:12 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:44:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:44:12 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>SCENARIO PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Login using empty username but password</span>
+						<span class='test-time'>Mar 15, 2024 02:44:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:44:14 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:44:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:44:14 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>SCENARIO PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Login using valid username but empty password</span>
+						<span class='test-time'>Mar 15, 2024 02:44:16 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2024 02:44:16 PM</span>
+	<span class='label end-time'>Mar 15, 2024 02:44:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+160ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='author-list'>
+		<span class='author label'>Test-Automation-Engineer-Habitamu-Azezew</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:44:16 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>SCENARIO FAILED</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:44:16 PM</td>
+				<td class='step-details'>
+						Please refer below screenshot for more detail.
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Login_using_valid_username_but_empty_password.png' src='Login_using_valid_username_but_empty_password.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -214,13 +559,14 @@
 					<div class='author-heading'>
 						<span class='author-name'>Test-Automation-Engineer-Habitamu-Azezew</span>
 						<span class='author-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>6</span>
+						<span class='label fail'>3</span>
 						</span>
 					</div>
 					<div class='author-content hide'>
 						<div class='author-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
+							<span class='label green accent-4 white-text'>Passed: 6</span>
+							<span class='label red lighten-1 white-text'>Failed: 3</span>
 							
 						</div>
 						<div class='author-tests'>
@@ -234,9 +580,49 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 9, 2024 12:04:52 PM</td>
-										<td class='linked' test-id='1'>Login using valid username and valid password</td>
+										<td>Mar 15, 2024 02:43:45 PM</td>
+										<td class='linked' test-id='1'>Forgot Password with valid email</td>
 										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:43:49 PM</td>
+										<td class='linked' test-id='2'>Forgot Password with an invalid email username value</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:43:53 PM</td>
+										<td class='linked' test-id='3'>Forgot Password with an invalid email format</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:43:56 PM</td>
+										<td class='linked' test-id='4'>Forgot Password with an empty email</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:44:03 PM</td>
+										<td class='linked' test-id='5'>Login using valid username and valid password</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:44:08 PM</td>
+										<td class='linked' test-id='6'>Login using valid username but invalid password</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:44:12 PM</td>
+										<td class='linked' test-id='7'>Login using invalid username but valid password</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:44:14 PM</td>
+										<td class='linked' test-id='8'>Login using empty username but password</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2024 02:44:16 PM</td>
+										<td class='linked' test-id='9'>Login using valid username but empty password</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -260,7 +646,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>9</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -272,19 +658,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 9, 2024 12:04:43 PM</div>
+					<div class='panel-lead'>Mar 15, 2024 02:43:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 9, 2024 12:04:52 PM</div>
+			 		<div class='panel-lead'>Mar 15, 2024 02:44:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 9s+78ms</div>
+					<div class='panel-lead'>0h 0m 33s+606ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -306,7 +692,7 @@
 							</tr>
 							<tr>
 								<td>Executed on</td>
-								<td>2024/03/09 12:04:43</td>
+								<td>2024/03/15 14:43:43</td>
 							</tr>
 							<tr>
 								<td>Environment</td>
@@ -314,7 +700,7 @@
 							</tr>
 							<tr>
 								<td>Browser Used</td>
-								<td>firefox</td>
+								<td>chrome</td>
 							</tr>
 							<tr>
 								<td>User Name</td>
@@ -355,14 +741,14 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+                parentCount: 9,
+				passParent: 6,
+				failParent: 3,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 3,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -387,7 +773,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Login using valid username and valid password":0.007
+			        "Forgot Password with valid email":0.002,"Forgot Password with an invalid email username value":0.119,"Forgot Password with an invalid email format":0.106,"Forgot Password with an empty email":0,"Login using valid username and valid password":0,"Login using valid username but invalid password":0,"Login using invalid username but valid password":0.001,"Login using empty username but password":0,"Login using valid username but empty password":0.16
 			};
 		</script>
 	

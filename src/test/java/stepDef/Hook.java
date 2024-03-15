@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import pageObj.AbstractPage;
 
 import java.io.File;
@@ -30,11 +31,15 @@ public class Hook {
             if (os.contains("WIN")) {
                 if (Config.browser.equalsIgnoreCase("chrome")) {
                     System.setProperty("webdriver.chrome.driver", ".\\src\\test\\webDrivers\\WIN\\chromedriver.exe");
-//                    driver = new ChromeDriver();
 
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*");
+                    options.addArguments("--remember-cert-error-decisions");
+                    options.addArguments("--ignore-certificate-errors");
+                    options.addArguments("--reduce-security-for-testing");
+                    options.addArguments("--allow-running-insecure-content"); //Disabled mixed content problem
 
+//                    Headless option
 //                    options.addArguments("--headless", "--window-size=1920,1200","--ignore-certificate-errors");
 //                    options.addArguments("--headless");
 //                    options.addArguments("--no-sandbox");
@@ -42,13 +47,20 @@ public class Hook {
 
                 } else if (Config.browser.equalsIgnoreCase("firefox")) {
                     System.setProperty("webdriver.gecko.driver", ".\\src\\test\\webDrivers\\WIN\\geckodriver.exe");
-                    driver = new FirefoxDriver();
+//                    driver = new FirefoxDriver();
 
 //                    FirefoxBinary firefoxBinary = new FirefoxBinary();
 //                    firefoxBinary.addCommandLineOptions("--headless");
 //                    FirefoxOptions firefoxOptions = new FirefoxOptions();
 //                    firefoxOptions.setBinary(firefoxBinary);
 //                    driver = new FirefoxDriver(firefoxOptions);
+
+                    FirefoxProfile firefoxprofile=new FirefoxProfile();
+                    firefoxprofile.setPreference("security.mixed_content.block_active_content",false);
+                    firefoxprofile.setPreference("security.mixed_content.block_display_content",false);
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.setProfile(firefoxprofile);
+                    driver = new FirefoxDriver(firefoxOptions);
                 }
             } else {
                 if (Config.browser.equalsIgnoreCase("firefox")) {
@@ -56,14 +68,28 @@ public class Hook {
                     firefoxBinary.addCommandLineOptions("--headless");
                     System.setProperty("webdriver.gecko.driver", "./src/test/webDrivers/Linux/geckodriver");
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
+
                     firefoxOptions.setBinary(firefoxBinary);
+                    FirefoxProfile firefoxprofile=new FirefoxProfile();
+                    firefoxprofile.setPreference("security.mixed_content.block_active_content",false);
+                    firefoxprofile.setPreference("security.mixed_content.block_display_content",false);
+                    firefoxOptions.setProfile(firefoxprofile);
+
                     driver = new FirefoxDriver(firefoxOptions);
                 } else if (Config.browser.equalsIgnoreCase("chrome")) {
                     System.setProperty("webdriver.chrome.driver", "./src/test/webDrivers/Linux/chromedriver");
+
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless", "--window-size=1920,1200","--ignore-certificate-errors");
-                    options.addArguments("--headless");
-                    options.addArguments("--no-sandbox");
+                    options.addArguments("--remote-allow-origins=*");
+                    options.addArguments("--remember-cert-error-decisions");
+                    options.addArguments("--ignore-certificate-errors");
+                    options.addArguments("--reduce-security-for-testing");
+                    options.addArguments("--allow-running-insecure-content"); //Disabled mixed content problem
+
+//                    headless option
+//                    options.addArguments("--headless", "--window-size=1920,1200","--ignore-certificate-errors");
+//                    options.addArguments("--headless");
+//                    options.addArguments("--no-sandbox");
                     driver = new ChromeDriver(options);
                 }
             }
